@@ -1374,7 +1374,7 @@ class S3(object):
         if not _headers and self.config.extra_headers is not None:
             _headers = {}
         if self.config.extra_headers is not None:
-            for k,v in self.config.extra_headers.iteritems():
+            for k,v in self.config.extra_headers.items():
                 _headers[k] = v
         request = S3Request(self, method_string, resource, _headers, body, uri_params)
 
